@@ -13,7 +13,7 @@ import { useState } from "react";
  */
 import Navbar from "./Navbar";
 
-const Header=()=> {
+const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -25,7 +25,11 @@ const Header=()=> {
           </a>
         </h1>
 
-        <div className={`relative md:justify-self-center md:top-0 ${navOpen ? "top-[100px] ":"top-0"} `}>
+        <div
+          className={`relative md:justify-self-center md:top-0 ${
+            navOpen ? "top-[100px] " : "top-0"
+          } `}
+        >
           <button
             className="menu-btn md:hidden top-0 "
             onClick={() => setNavOpen((prev) => !prev)}
@@ -46,6 +50,6 @@ const Header=()=> {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

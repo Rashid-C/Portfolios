@@ -5,6 +5,7 @@
 
 import About from "./components/About";
 import Header from "./components/Header";
+import Review from "./components/Review";
 import Skill from "./components/Skill";
 import Work from "./components/Work";
 import Hero from "./Hero";
@@ -21,6 +22,7 @@ const App = () => {
         <About />
         <Skill />
         <Work />
+        <Review />
       </main>
     </>
   );
