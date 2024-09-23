@@ -1,12 +1,17 @@
-
 /**
  * @copyright 2024 RASHID_C
  * @license Apache-2.0
  */
 
-const App=()=>{
-  return <h1>Hello</h1>
-}
+import Header from "./components/Header";
 
+/**
+ * Components
+ */
+const App = () => {
+  return (
+  <Header />
+)
+};
 
-export default App
+export default App;
