@@ -6,6 +6,7 @@
 import About from "./components/About";
 import Header from "./components/Header";
 import Skill from "./components/Skill";
+import Work from "./components/Work";
 import Hero from "./Hero";
 
 /**
@@ -19,6 +20,7 @@ const App = () => {
         <Hero />
         <About />
         <Skill />
+        <Work />
       </main>
     </>
   );
