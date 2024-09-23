@@ -52,8 +52,6 @@ ButtonPrimary.propTypes = {
   classes: PropTypes.string,
 };
 
-
-
 /**
  * Outline Button
  */

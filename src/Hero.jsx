@@ -3,7 +3,7 @@
  * @license Apache-2.0
  */
 
-import { ButtonPrimary ,ButtonOutline} from "./components/Button";
+import { ButtonPrimary, ButtonOutline } from "./components/Button";
 
 /**
  * Components
@@ -37,7 +37,11 @@ const Hero = () => {
           </h2>
           <div className="flex items-center gap-3">
             <ButtonPrimary label="Download CV" icon="download" />
-            <ButtonOutline href="#about" label="Scroll down" icon="arrow_downward" />
+            <ButtonOutline
+              href="#about"
+              label="Scroll down"
+              icon="arrow_downward"
+            />
           </div>
         </div>
 
