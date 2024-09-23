@@ -4,14 +4,20 @@
  */
 
 import Header from "./components/Header";
+import Hero from "./Hero";
 
 /**
  * Components
  */
 const App = () => {
   return (
-  <Header />
-)
+    <>
+      <Header />
+      <main>
+        <Hero />
+      </main>
+    </>
+  );
 };
 
 export default App;
