@@ -19,9 +19,14 @@ const ButtonPrimary = ({
   icon,
   classes = "",
 }) => {
-  if (href) {
+  if (!href) {
     return (
-      <a href={href} target={target} className={`btn btn-primary ${classes}`}>
+      <a
+        href=""
+        target={target}
+        className={`btn btn-primary ${classes}`}
+        download={"/images/RASHID CHOLAYIL.pdf"}
+      >
         {label}
         {icon ? (
           <span className="material-symbols-rounded" aria-hidden="true">

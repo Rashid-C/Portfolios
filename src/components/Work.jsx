@@ -10,40 +10,40 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
   {
-    imgSrc: "/images/project-1.jpg",
-    title: "Full stack music app",
+    imgSrc: "/images/project-1.png",
+    title: "Full stack blog app",
     tags: ["API", "MVC", "Development"],
-    projectLink: "https://musify-5al0.onrender.com/",
+    projectLink: "https://github.com/Rashid-C/mern-blog",
   },
   {
-    imgSrc: "/images/project-2.jpg",
-    title: "Free stock photo app",
-    tags: ["API", "SPA"],
-    projectLink: "https://pixstock-official.vercel.app/",
+    imgSrc: "/images/project-2.png",
+    title: "React vite portfolio ",
+    tags: ["API", "GSAP", "Tailwind CSS"],
+    projectLink: "https://github.com/Rashid-C/Portfolios",
   },
   {
-    imgSrc: "/images/project-3.jpg",
-    title: "Recipe app",
-    tags: ["Development", "API"],
-    projectLink: "",
+    imgSrc: "/images/project-3.png",
+    title: "Modern school website",
+    tags: ["Development", "RestAPI", "Animation"],
+    projectLink: "https://github.com/Rashid-C/Professional_Education_Website",
   },
   {
-    imgSrc: "/images/project-4.jpg",
-    title: "Real state website",
-    tags: ["Web-design", "Development"],
-    projectLink: "https://github.com/codewithsadee-org/wealthome",
-  },
-  {
-    imgSrc: "/images/project-5.jpg",
+    imgSrc: "/images/project-4.png",
     title: "eCommerce website",
-    tags: ["eCommerce", "Development"],
-    projectLink: "https://github.com/codewithsadee/anon-ecommerce-website",
+    tags: ["Web-design", "Development", "Figma"],
+    projectLink: "https://github.com/Rashid-C/speed-ecommerce",
   },
   {
-    imgSrc: "/images/project-6.jpg",
-    title: "vCard Personal portfolio",
+    imgSrc: "/images/project-5.png",
+    title: "Service website",
+    tags: ["IT", "Service"],
+    projectLink: "https://github.com/Rashid-C/Rashid_portfolio",
+  },
+  {
+    imgSrc: "/images/project-6.png",
+    title: "ToDo personal app",
     tags: ["Web-design", "Development"],
-    projectLink: "https://github.com/codewithsadee/vcard-personal-portfolio",
+    projectLink: "https://github.com/Rashid-C/To-Do-App",
   },
 ];
 

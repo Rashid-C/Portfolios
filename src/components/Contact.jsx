@@ -5,7 +5,7 @@
 
 const socialLinks = [
   {
-    href: "https://www.github.com/codewithsadee-org",
+    href: "https://github.com/Rashid-C",
     icon: (
       <svg
         width="24"
@@ -23,7 +23,7 @@ const socialLinks = [
     alt: "GitHub",
   },
   {
-    href: "https://www.linkedin.com/in/codewithsadee",
+    href: "https://www.linkedin.com/in/rashid-c/",
     icon: (
       <svg
         width="24"
@@ -41,7 +41,7 @@ const socialLinks = [
     alt: "LinkedIn",
   },
   {
-    href: "https://x.com/codewithsadee_",
+    href: "https://x.com/",
     icon: (
       <svg
         width="24"
@@ -59,7 +59,7 @@ const socialLinks = [
     alt: "Twitter X",
   },
   {
-    href: "https://www.instagram.com/codewithsadee",
+    href: "https://www.instagram.com/rashid__rayhan/",
     icon: (
       <svg
         width="25"
@@ -75,6 +75,30 @@ const socialLinks = [
       </svg>
     ),
     alt: "Instagram",
+  },
+
+  {
+    href: "https://wa.me/+917356958972", // Replace 'yourphonenumber' with your actual WhatsApp number
+    icon: (
+      <svg
+        className=""
+        width="25"
+        height="24"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17.472 14.382c-.297-.149-1.754-.867-2.026-.967-.272-.1-.47-.149-.668.15-.198.297-.768.965-.94 1.163-.173.198-.347.223-.644.075-.297-.149-1.255-.464-2.39-1.482-.883-.786-1.48-1.754-1.653-2.051-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.273.297-.47.099-.198.05-.372-.025-.521-.075-.149-.668-1.611-.916-2.209-.242-.581-.487-.501-.668-.51-.174-.007-.372-.01-.572-.01-.199 0-.521.073-.796.372-.272.298-1.044 1.017-1.044 2.478s1.068 2.875 1.216 3.073c.149.198 2.107 3.223 5.104 4.515.714.307 1.27.49 1.705.628.717.227 1.37.195 1.887.118.576-.086 1.754-.717 2.003-1.412.248-.694.248-1.29.173-1.412-.074-.123-.272-.198-.57-.347z"
+          fill="currentColor"
+        />
+        <path
+          d="M12.08 0C5.408 0 0 5.408 0 12.08c0 2.13.559 4.194 1.618 6.016L.076 24l5.983-1.533c1.786 1.013 3.82 1.549 5.96 1.549 6.672 0 12.08-5.408 12.08-12.08S18.752 0 12.08 0zm0 22.04c-1.965 0-3.89-.521-5.562-1.505l-.397-.236-3.55.912.947-3.458-.259-.405A10.02 10.02 0 0 1 2 12.08c0-5.562 4.518-10.08 10.08-10.08S22.16 6.518 22.16 12.08c0 5.562-4.518 10.08-10.08 10.08z"
+          fill="currentColor"
+        />
+      </svg>
+    ),
+    alt: "WhatsApp",
   },
 ];
 
@@ -92,14 +116,17 @@ const Contact = () => {
             collaborating on something amazing!
           </p>
           <div className="flex items-center gap-2 mt-auto">
-            {socialLinks.map(({ href, icon }, key) => (
+            {socialLinks.map(({ href, icon, alt }, key) => (
               <a
                 key={key}
                 href={href}
                 target="_blank"
-                className="w-12 h-12 grid place-items-center ring-inset
-                 ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color]
-                  hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-50/80 reveal-up"
+                className={`w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg transition-transform duration-300 ease-in-out 
+             hover:scale-125 hover:shadow-2xl active:bg-zinc-50/80 reveal-up
+             ${
+               alt === "WhatsApp" &&
+               "text-green-800 bg-green-500 animate-pulse shadow-lg animate-zoom"
+             }`}
               >
                 {icon}
               </a>

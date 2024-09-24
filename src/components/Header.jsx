@@ -25,11 +25,7 @@ const Header = () => {
           </a>
         </h1>
 
-        <div
-          className={`relative md:justify-self-center md:top-0 ${
-            navOpen ? "top-[100px] " : "top-0"
-          } `}
-        >
+        <div className={`relative md:justify-self-center md:top-0 `}>
           <button
             className="menu-btn md:hidden top-0 "
             onClick={() => setNavOpen((prev) => !prev)}
