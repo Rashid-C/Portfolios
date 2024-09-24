@@ -3,6 +3,15 @@
  * @license Apache-2.0
  */
 
+/**
+ * Node modules
+ */
+import { ReactLenis } from "lenis/react";
+
+/**
+ * Components
+ */
+
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -12,12 +21,9 @@ import Skill from "./components/Skill";
 import Work from "./components/Work";
 import Hero from "./Hero";
 
-/**
- * Components
- */
 const App = () => {
   return (
-    <>
+    <ReactLenis root>
       <Header />
       <main>
         <Hero />
@@ -28,7 +34,7 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
-    </>
+    </ReactLenis>
   );
 };
 
