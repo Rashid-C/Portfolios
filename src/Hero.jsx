@@ -4,6 +4,7 @@
  */
 
 import { ButtonPrimary, ButtonOutline } from "./components/Button";
+import profile from '../../rashid-c/images/profile.png'
 
 /**
  * Components
@@ -17,7 +18,7 @@ const Hero = () => {
           <div className="flex items-center gap-3">
             <figure className="img-box w-9 h-9 rounded-lg">
               <img
-                src="/images/profile.png"
+                src={profile}
                 className="img-cover"
                 alt="RASHID_C"
                 width={40}

@@ -7,6 +7,7 @@
  * Node modules
  */
 import PropTypes from "prop-types";
+import cv from '../../Rashid_C.pdf'
 
 /**
  * Primary Button
@@ -22,10 +23,10 @@ const ButtonPrimary = ({
   if (!href) {
     return (
       <a
-        href=""
+        href={cv}
         target={target}
         className={`btn btn-primary ${classes}`}
-        download={"/images/RASHID CHOLAYIL.pdf"}
+        download={cv}
       >
         {label}
         {icon ? (
