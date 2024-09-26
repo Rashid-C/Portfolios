@@ -2,6 +2,8 @@
  * @copyright 2024 RASHID_C
  * @license Apache-2.0
  */
+import axios from "axios";
+import { useState } from "react";
 
 const socialLinks = [
   {
@@ -103,6 +105,37 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/send-email",
+        formData
+      );
+      if (response.status === 200) {
+        alert("Message sent successfully!");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message.");
+    }
+  };
+
   return (
     <section id="contact" className="section">
       <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
@@ -135,7 +168,8 @@ const Contact = () => {
         </div>
 
         <form
-          action="https://getform.io/f/ayvpxzmb"
+          onSubmit={handleSubmit}
+          // action="https://getform.io/f/ayvpxzmb"
           method="POST"
           className="xl:pl-10 2xl:pl-20"
         >
@@ -153,6 +187,8 @@ const Contact = () => {
                 required
                 placeholder="Rashid C"
                 className="text-field reveal-up"
+                value={formData.name}
+                onChange={handleChange}
               />
             </div>
 
@@ -169,6 +205,8 @@ const Contact = () => {
                 required
                 placeholder="jsoanu@gmail.com"
                 className="text-field reveal-up"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
 
@@ -183,6 +221,8 @@ const Contact = () => {
                 placeholder="Hi!"
                 required
                 className="text-field resize-y min-h-32 max-h-80 reveal-up"
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
           </div>
